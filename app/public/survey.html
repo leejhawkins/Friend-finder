@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friend Finder Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Survey Questions</h2>
+        <hr>
+        <h3>About You</h3>
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name">
+        <label for="picture">Link to Photo</label>
+        <input type="text" class="form-control" id="picture">
+        <div class="card-body">
+
+            <form>
+
+                <label for="q1">Question 1</label>
+                <select class="custom-select" id="q1" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+
+                <label for="q2">Question 2</label>
+                <select class="custom-select" id="q2" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+
+                <label for="q3">Question 3</label>
+                <select class="custom-select" id="q3" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q4">Question 4</label>
+                <select class="custom-select" id="q4" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q5">Question 5</label>
+                <select class="custom-select" id="q5" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+                <label for="q6">Question 6</label>
+                <select class="custom-select" id="q6" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q7">Question 7</label>
+                <select class="custom-select" id="q7" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q8">Question 8</label>
+                <select class="custom-select" id="q8" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q9">Question 9</label>
+                <select class="custom-select" id="q9" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+
+                <label for="q10">Question 10</label>
+                <select class="custom-select" id="q10" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Pick an answer
+                </div>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                    var scores = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
+                    $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(),
+                    $("#q9").val().trim(), $("#q10").val().trim()]
+                    var newFriend = {
+                        name: $("#name").val().trim(),
+                        scores: scores
+                    };
+                    console.log(newFriend)
+                    $.post("/api/friends", newFriend,
+                        function (data) {
+                            alert("Your bestie is: " + data.name)
+                        })
+                }, false);
+            });
+        }, false);
+    })();
+</script>
