@@ -11,151 +11,183 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
+<style>
+    label {
+        font-weight:bold;
+    }
+</style>
 
 <body>
     <div class="container">
-        <h2>Survey Questions</h2>
+        <h2>Friend Finder Survey</h2>
         <hr>
-        <h3>About You</h3>
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name">
-        <label for="picture">Link to Photo</label>
-        <input type="text" class="form-control" id="picture">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bestie"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="bestie-image">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Personal Info</h3>
         <div class="card-body">
-
-            <form>
-
-                <label for="q1">Question 1</label>
-                <select class="custom-select" id="q1" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+            <form class="needs-validation" novalidate>
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
                 <div class="invalid-feedback">
-                    Please Pick an answer
+                    Please provide your name
+                </div>
+                <label for="picture">Link to Photo</label>
+                <input type="text" class="form-control" id="picture" required>
+                <div class="invalid-feedback">
+                    Please provide a link to your image
                 </div>
 
 
-                <label for="q2">Question 2</label>
-                <select class="custom-select" id="q2" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
+
+                <div class="card-body">
+                    <h3>Survey Questions</h3>
 
 
-                <label for="q3">Question 3</label>
-                <select class="custom-select" id="q3" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
+                    <label for="q1">Question 1: <i>I use daylight hours to get things done</i></label>
+                    <select class="custom-select" id="q1" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
 
-                <label for="q4">Question 4</label>
-                <select class="custom-select" id="q4" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
 
-                <label for="q5">Question 5</label>
-                <select class="custom-select" id="q5" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
-                <label for="q6">Question 6</label>
-                <select class="custom-select" id="q6" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
+                    <label for="q2">Question 2: <i>I feel energized after being around other people</i></label>
+                    <select class="custom-select" id="q2" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
 
-                <label for="q7">Question 7</label>
-                <select class="custom-select" id="q7" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
 
-                <label for="q8">Question 8</label>
-                <select class="custom-select" id="q8" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
+                    <label for="q3">Question 3: <i>I believe reason, rather than force is a way to solve problems</i></label>
+                    <select class="custom-select" id="q3" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
 
-                <label for="q9">Question 9</label>
-                <select class="custom-select" id="q9" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
+                    <label for="q4">Question 4: <i>I long for a less complex time, like in eras past</i></label>
+                    <select class="custom-select" id="q4" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
 
-                <label for="q10">Question 10</label>
-                <select class="custom-select" id="q10" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please Pick an answer
-                </div>
-                <button type="submit" class="btn btn-primary submit">Submit</button>
+                    <label for="q5">Question 5: <i>I find love to be more of a guiding influence than power</i></label>
+                    <select class="custom-select" id="q5" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+                    <label for="q6">Question 6: <i>Details and the everyday minutae of life are very important to me</i></label>
+                    <select class="custom-select" id="q6" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+
+                    <label for="q7">Question 7: <i>I need time alone everyday</i></label>
+                    <select class="custom-select" id="q7" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+
+                    <label for="q8">Question 8: <i>The acceptance of others is important to me</i></label>
+                    <select class="custom-select" id="q8" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+
+                    <label for="q9">Question 9: <i>I try to have a positive effect on others</i></label>
+                    <select class="custom-select" id="q9" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+
+                    <label for="q10">Question 10: <i>I am frequently late for things</i></label>
+                    <select class="custom-select" id="q10" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>1 Strongly Disagree</option>
+                        <option>2 Somewhat Disagree</option>
+                        <option>3 Neither Agree or Disagree</option>
+                        <option>4 Somewhat Agree</option>
+                        <option>5 Strongly Agree</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide an answer
+                    </div>
+                    <button type="submit" class="btn btn-primary submit" style="margin-top:20px">Submit</button>
             </form>
         </div>
     </div>
@@ -175,21 +207,32 @@
                         event.preventDefault();
                         event.stopPropagation();
                     }
+                    event.preventDefault();
                     form.classList.add('was-validated');
-                    var scores = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
-                    $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(),
-                    $("#q9").val().trim(), $("#q10").val().trim()]
-                    var newFriend = {
-                        name: $("#name").val().trim(),
-                        scores: scores
-                    };
-                    console.log(newFriend)
-                    $.post("/api/friends", newFriend,
-                        function (data) {
-                            alert("Your bestie is: " + data.name)
-                        })
+                    getBestie();
                 }, false);
             });
         }, false);
     })();
+    function getBestie() {
+        var scores = []
+        for (var i = 1; i < 11; i++) {
+            scores.push($("#q" + i).val().trim().charAt(0))
+        }
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#picture").val().trim(),
+            scores: scores,
+        };
+        $.post("/api/friends", newFriend,
+            function (data) {
+                $("#bestie").text("Your bestie is:  " + data.name)
+                $("#bestie-image").append($("<img>").attr("src", data.photo).css("width", "466px"));
+                $("#exampleModal").modal('show')
+                $('#exampleModal').on('hidden.bs.modal', function (e) {
+                    window.location.assign("/home")
+                })
+            })
+    }
+
 </script>

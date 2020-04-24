@@ -1,5 +1,4 @@
 var friendData = require("../data/friends.js")
-console.log(friendData)
 module.exports = function(app) {
     app.get("/api/friends",function(req,res){
         res.json(friendData)
@@ -21,6 +20,7 @@ module.exports = function(app) {
             } else if(bestScore>totalScore) {
                 bestScore = totalScore;
                 bestie = friendData[i] 
+                console.log(bestScore)
             }
             
         }
