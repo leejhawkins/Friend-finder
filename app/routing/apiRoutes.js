@@ -13,6 +13,7 @@ module.exports = function(app) {
             var totalScore = 0;
             for(var j=0;j<friendData[i].scores.length;j++) {
                 totalScore = totalScore + Math.abs(friendData[i].scores[j]-newFriend.scores[j]);
+                console.log(totalScore)
             }
             if (i===0) {
                 bestScore = totalScore;
